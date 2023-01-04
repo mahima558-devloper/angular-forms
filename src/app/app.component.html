@@ -1,6 +1,6 @@
-<app-header></app-header>
-<h3>{{ title }}</h3>
-<form #basicForm="ngForm" (submit)="getData(basicForm.value)">
+<!-- <app-header></app-header>
+<h3>{{ title }}</h3> -->
+<!-- <form #basicForm="ngForm" (submit)="getData(basicForm.value)">
   <h3>Login Form</h3>
   <input type="text" ngModel name="user" placeholder="Enter Name" />
   <br /><br />
@@ -15,4 +15,17 @@
 
 <li>
   {{ userData.user }}
-</li>
+</li> -->
+<h1>{{ title }}</h1>
+<input type="text" placeholder="enter text" #task />
+<br /><br />
+<button (click)="newTaskAdd(task.value)">Add new task</button>
+<br /><br />
+<ul>
+  <li>
+    <h2 *ngFor="let item of list">
+      {{ item.name }}
+      <button (click)="remove(item.id)">remove</button>
+    </h2>
+  </li>
+</ul>
