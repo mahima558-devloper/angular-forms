@@ -9,7 +9,11 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
   title = 'Mahima Form';
+  display = false;
   userData: any = {};
+  toogle() {
+    this.display = !this.display;
+  }
   getData(data: NgForm) {
     console.warn(data);
     this.userData = data;
